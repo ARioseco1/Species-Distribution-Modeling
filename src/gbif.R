@@ -71,6 +71,7 @@ fData=fData %>%
 fData=fData %>%
   distinct(decimalLongitude, decimalLatitude, speciesKey, datasetKey, .keep_all=TRUE)
 
+write.csv(fData, "data/cleandata.csv")
 
 
 # one fell swoop
@@ -80,3 +81,5 @@ fData=fData %>%
 #   filter(!basisOfRecord %in% c("FOSSIL_SPECIMEN", "LIVING_SPECIMEN")) %>%
 #   cc_sea(lon="decimalLongitude", lat="decimalLatitude") %>%
 #   distinct(decimalLongitude, decimalLatitude, speciesKey, datasetKey, .keep_all=TRUE)
+
+
